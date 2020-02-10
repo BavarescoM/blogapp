@@ -1,5 +1,0 @@
-npm install express --save
-npm install express-handlebars --save
-npm install body-parser --save
-npm install mongoose --save
-npm install --save handlebars@4.5.3
