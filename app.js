@@ -68,7 +68,7 @@ app.get("/", (req, res) => {
     .populate("categoria")
     .sort({ data: "desc" })
     .then(postagens => {
-      res.render("index", { postagens: postagens });
+      res.render("/index", { postagens: postagens });
     })
     .catch(error => {
       req.flash("error_msg", "Houve um erro interno");
