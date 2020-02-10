@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
-require("../models/Categoria");
+require("../Models/Categoria");
 const Categoria = mongoose.model("categorias");
-require("../models/Postagem");
+require("../Models/Postagem");
 const Postagem = mongoose.model("postagens");
-const { eAdmin } = require("../helpers/eAdmin");
+const { eAdmin } = require("../Helpers/eAdmin");
 
 router.get("/", eAdmin, (req, res) => {
   res.render("admin/index");
