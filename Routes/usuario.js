@@ -1,10 +1,10 @@
-const express = require("express");
+const express = require("./node_modules/express");
 const router = express.Router();
 const mongoose = require("mongoose");
-require("../Models/Usuario");
+require("../models/Usuario");
 const Usuario = mongoose.model("usuarios");
-const bcript = require("bcryptjs");
-const passport = require("passport");
+const bcript = require("./node_modules/bcryptjs");
+const passport = require("./node_modules/passport");
 
 router.get("/registro", (req, res) => {
   res.render("usuarios/registro");

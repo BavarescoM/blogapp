@@ -4,18 +4,18 @@ const handlebars = require("express-handlebars");
 const bodyParser = require("body-parser");
 const app = express();
 const mongoose = require("mongoose");
-const admin = require("./Routes/admin");
+const admin = require("./routes/admin");
 const path = require("path");
 const session = require("express-session");
 const flash = require("connect-flash");
-require("./Models/Postagem");
+require("./models/Postagem");
 const Postagem = mongoose.model("postagens");
-require("./Models/Categoria");
+require("./models/Categoria");
 const Categoria = mongoose.model("categorias");
-const usuarios = require("./Routes/usuario");
+const usuarios = require("./routes/usuario");
 const passport = require("passport");
-require("./Config/auth");
-const db = require("./Config/db");
+require("./config/auth");
+const db = require("./config/db");
 //configurações
 //sessão
 app.use(
@@ -27,7 +27,7 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
-require("./Config/auth")(passport);
+require("./config/auth")(passport);
 
 app.use(flash());
 //middleware
